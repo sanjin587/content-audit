@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sanjin587/content-audit/references/output.schema.json",
+  "title": "Content Audit Output v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["mode", "status", "conclusion", "protected_elements", "caveats"],
+  "properties": {
+    "request_id": {"type": "string"},
+    "mode": {"type": "string", "enum": ["topic_direction", "audit", "rewrite", "compare", "data_review"]},
+    "status": {"type": "string", "enum": ["ok", "needs_input", "unsupported"]},
+    "conclusion": {"type": "string"},
+    "protected_elements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "text", "reason"],
+        "properties": {
+          "type": {"type": "string"},
+          "text": {"type": "string"},
+          "reason": {"type": "string"}
+        }
+      }
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "topic_80": {"type": ["object", "null"]},
+        "audit_60": {"type": ["object", "null"]}
+      }
+    },
+    "bottleneck": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "stage": {"type": "string"},
+        "quote": {"type": ["string", "null"]},
+        "reason": {"type": "string"}
+      }
+    },
+    "retain": {"type": "array", "items": {"type": "string"}},
+    "change": {"type": "array", "items": {"type": "string"}},
+    "priority_change": {"type": ["string", "null"]},
+    "observations": {"type": "array", "items": {"type": "string"}},
+    "inferences": {"type": "array", "items": {"type": "string"}},
+    "rewrite": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "strategy": {"type": "string"},
+        "before_after": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["before", "after", "reason"],
+            "properties": {
+              "before": {"type": "string"},
+              "after": {"type": "string"},
+              "reason": {"type": "string"}
+            }
+          }
+        },
+        "final_draft": {"type": "string"},
+        "second_check": {"type": "string"}
+      }
+    },
+    "comparison": {"type": ["object", "null"]},
+    "next_experiment": {"type": ["string", "null"]},
+    "caveats": {"type": "array", "items": {"type": "string"}}
+  }
+}
+

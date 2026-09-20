@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sanjin587/content-audit/references/input.schema.json",
+  "title": "Content Audit Input v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["mode", "platform"],
+  "properties": {
+    "request_id": {"type": "string", "minLength": 1},
+    "mode": {
+      "type": "string",
+      "enum": ["auto", "topic_direction", "audit", "rewrite", "compare", "data_review"]
+    },
+    "platform": {
+      "type": "string",
+      "enum": ["douyin", "wechat_channels", "xiaohongshu", "x_twitter", "wechat_article", "general"]
+    },
+    "content": {"type": "string"},
+    "variants": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label", "content"],
+        "properties": {
+          "label": {"type": "string", "minLength": 1},
+          "content": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "target_audience": {"type": "string"},
+        "author_positioning": {"type": "string"},
+        "goal": {"type": "string"},
+        "evidence": {"type": "array", "items": {"type": "string"}},
+        "constraints": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "protected_elements": {"type": "array", "items": {"type": "string"}},
+    "rewrite_options": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "intensity": {"type": "string", "enum": ["light", "medium", "restructure"]},
+        "delivery": {"type": "string", "enum": ["original_voice", "spoken"]}
+      }
+    },
+    "publish_data": {
+      "type": "object",
+      "additionalProperties": {"type": ["number", "integer", "string", "null"]}
+    }
+  }
+}
+

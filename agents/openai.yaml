@@ -1,7 +1,7 @@
 interface:
-  display_name: "内容审计"
-  short_description: "审计抖音、X、公众号与 AI 商业内容的停留、共鸣、价值和传播潜力"
-  default_prompt: "Use $content-audit to audit, rewrite, compare, or review this content draft according to the user's request."
+  display_name: "三金内容导演"
+  short_description: "选题、审计、改写、对比和复盘内容，同时保护事实与作者声音"
+  default_prompt: "Use $content-audit to direct, audit, rewrite, compare, or review this content according to the user's request."
 
 policy:
   allow_implicit_invocation: true

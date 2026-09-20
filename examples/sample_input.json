@@ -1,0 +1,18 @@
+{
+  "request_id": "demo-001",
+  "mode": "rewrite",
+  "platform": "douyin",
+  "content": "最近我试了一个新的 AI 工具。我觉得它特别强，可以全面提升工作效率。今天给大家分享一下。",
+  "context": {
+    "target_audience": "经常处理重复资料的内容创作者",
+    "author_positioning": "分享自己真实测试过程的 AI 实践者",
+    "goal": "让用户继续看并理解这次测试解决了什么问题",
+    "evidence": ["作者亲自试过该工具"],
+    "constraints": ["不得编造工具名称、耗时、收益或用户反馈"]
+  },
+  "rewrite_options": {
+    "intensity": "medium",
+    "delivery": "spoken"
+  }
+}
+
