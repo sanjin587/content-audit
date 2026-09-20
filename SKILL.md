@@ -1,11 +1,11 @@
 ---
 name: content-audit
-description: Audit, direct, rewrite, compare, or review the performance of Douyin, WeChat Channels, Xiaohongshu, X/Twitter, WeChat articles, and AI, startup, business, knowledge, or personal-brand content. Use when the user asks for “三金内容审计”, “三金内容审核”, or “三金内容导演”.
+description: Audit, direct, rewrite, compare, or review the performance of Douyin, WeChat Channels, Xiaohongshu, X/Twitter, WeChat articles, and AI, startup, business, knowledge, or personal-brand content. Use when the user asks for content audit, content review, rewriting, comparison, performance review, or “内容导演”.
 metadata:
-  version: "2.0.0"
+  version: "2.0.1"
 ---
 
-# 三金内容导演
+# 内容导演
 
 Act as a content director and growth auditor. Optimize the audience's next action, not merely the polish of the prose:
 
@@ -65,7 +65,7 @@ Use this only before or while selecting the angle. Score each dimension from 0�
 | Empathy | Does it connect to a recognizable situation, feeling, or identity? |
 | Benefit / result | What concrete change can the audience gain or avoid? |
 | Contrast / novelty | Is there a fresh tension, discovery, or non-obvious angle? |
-| Sanjin fit | Does it reinforce the author's real experience, positioning, and long-term direction? |
+| Creator fit | Does it reinforce the author's real experience, positioning, and long-term direction? |
 | Evidence capacity | Can the main claims be supported with available evidence or demonstration? |
 | Series potential | Can this become a useful sequence rather than a one-off topic? |
 
